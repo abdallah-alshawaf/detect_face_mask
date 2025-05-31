@@ -1,0 +1,156 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files and weights (large files)
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+yolo*.pt
+models/*.pt
+models/*.pth
+models/*.onnx
+
+# Training outputs and runs
+runs/
+lightning_logs/
+wandb/
+mlruns/
+
+# Dataset (usually too large for git)
+data/images/
+data/annotations/
+data/train/
+data/val/
+data/test/
+data/raw/
+*.zip
+*.tar
+*.tar.gz
+
+# Generated output files
+output/
+results/
+predictions/
+detections/
+webcam_frames/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Log files
+*.log
+logs/
+
+# Cache files
+.cache/
+*.cache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Desktop.ini
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Downloaded datasets
+*.csv
+*.json
+dataset.yaml
+
+# Backup files
+*.bak
+*.backup
+
+# Large image files (optional - uncomment if you don't want to track images)
+# *.jpg
+# *.jpeg
+# *.png
+# *.bmp
+# *.tiff
+# *.gif
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.mkv
+
+# Documentation builds
+docs/_build/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Keep our trained model
+!models/best.pt
