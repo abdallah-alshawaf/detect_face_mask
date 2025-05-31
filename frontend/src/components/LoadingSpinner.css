@@ -1,0 +1,151 @@
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.spinner-ring:nth-child(1) {
+  border-top-color: #667eea;
+  animation-delay: 0s;
+}
+
+.spinner-ring:nth-child(2) {
+  border-right-color: #764ba2;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+}
+
+.spinner-ring:nth-child(3) {
+  border-bottom-color: #10b981;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+
+.spinner-ring:nth-child(4) {
+  border-left-color: #f59e0b;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+.ai-brain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Size Variants */
+.loading-spinner.small .spinner {
+  width: 40px;
+  height: 40px;
+}
+
+.loading-spinner.small .ai-brain {
+  font-size: 1rem;
+}
+
+.loading-spinner.small .loading-text {
+  font-size: 0.875rem;
+}
+
+.loading-spinner.large .spinner {
+  width: 120px;
+  height: 120px;
+}
+
+.loading-spinner.large .ai-brain {
+  font-size: 3rem;
+}
+
+.loading-spinner.large .loading-text {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .loading-spinner .spinner {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loading-spinner .ai-brain {
+    font-size: 1.5rem;
+  }
+
+  .loading-spinner.large .spinner {
+    width: 80px;
+    height: 80px;
+  }
+
+  .loading-spinner.large .ai-brain {
+    font-size: 2rem;
+  }
+}

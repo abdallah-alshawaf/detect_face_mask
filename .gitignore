@@ -152,5 +152,8 @@ coverage.xml
 # mypy
 .mypy_cache/
 
+#frontend
+frontend/node_modules/
+
 # Keep our trained model
 !models/best.pt
